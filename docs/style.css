@@ -54,3 +54,48 @@ body {
     flex: 1;
     padding: 20px;
 }
+/* تنظیمات برای موبایل */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .sidebar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar.open ul {
+        display: flex;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* دکمه باز و بسته کردن */
+.sidebar-toggle {
+    display: none;
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
